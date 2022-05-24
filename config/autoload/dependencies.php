@@ -14,5 +14,5 @@ use App\JsonRpc\CalculatorService;
 use App\JsonRpc\CalculatorServiceInterface;
 
 return [
-//    CalculatorServiceInterface::class    =>  CalculatorService::class
+    CalculatorServiceInterface::class    =>  CalculatorService::class
 ];
