@@ -9,5 +9,10 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
+use App\JsonRpc\CalculatorService;
+use App\JsonRpc\CalculatorServiceInterface;
+
 return [
+    CalculatorServiceInterface::class    =>  CalculatorService::class
 ];

@@ -11,15 +11,18 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
+use App\JsonRpc\CalculatorServiceInterface;
+
 class IndexController extends AbstractController
 {
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
-
+        $res = make(CalculatorServiceInterface::class)->add(1,2);
         return [
             'method' => $method,
+            'res'   => $res,
             'message' => "Hello {$user}.",
         ];
     }
